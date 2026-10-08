@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: asemannama-bot
+    runtime: python
+    buildCommand: "pip install -r requirements.txt && playwright install chromium && playwright install-deps chromium"
+    startCommand: "python bot.py"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
+      - key: USE_PROXY
+        value: "0"
+      - key: CHROME_PATH
+        value: ""
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
