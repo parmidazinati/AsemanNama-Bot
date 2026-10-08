@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+chrome_profile/
+*.png
+*.log
+users.json
+offset.txt
